@@ -1,0 +1,149 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <!--Title of page-->
+    <title>Suzanne Collins Home</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Links to external sheets/scripts-->
+    <link rel="stylesheet" type="text/css" href="css/css.css" />
+    <script src="javascript.js"></script>
+</head>
+<body>
+    <!--
+        The navbar
+        It has blue text saying "Suzanne Collins", a menu which when hovers
+        over displays links, and a searchbar which as of writing this does
+        not work.
+    -->
+    <div class="navbar">
+        <!--Suzanne Collins text-->
+        <p id="SuzanneText" style="font-size:5em;">Suzanne Collins</p>
+        <!--(dropdown menu and links)-->
+        <div class="dropdown">
+            <button class="dropbtn">
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="BrowseBooks.html">Browse Books</a>
+                <a href="AboutTheAuthor.html">About the Author</a>
+                <a href="AcclaimAndReviews.html">Acclaim and Reviews</a>
+            </div>
+
+        </div>
+        <!--(search bar)-->
+        <a>
+            <div class="search-container">
+                <form action="/action_page.php">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                    <input type="text" placeholder="Search for books.." name="search">
+                </form>
+            </div>
+        </a>
+    </div>
+    <!--
+        The centered grid
+        This is a div that nicely centers all content whithin it, I use it
+        for anything that I want to be centered, sometimes it is used
+        multiple times on a single page.
+    -->
+    <div class="centered-grid-container">
+        <div>
+            <!--The heading users immediately see-->
+            <h1>New Releases in 2020!</h1>
+        </div>
+        <div>
+            <!--Icon of a book-->
+            <img src="Images/book-icon.png" />
+        </div>
+        <div>
+            <!--Message which hints at a new book arriving-->
+            <h1>Be on the lookout for "The Ballad of Songbirds and Snakes"</h1>
+        </div>
+        <div>
+            <!--
+                Heading for the following grid containing the books in the
+                hunger games series.
+            -->
+            <h1>See prior novels in the Hunger Games series!</h1>
+        </div>
+
+    </div>
+
+    <!--
+        The book cover grid.
+        This grid allows for three collumns and technically an infinite
+        number of rows. It contains the covers of books (images) and then
+        interactable buttons which display paragraphs about said books.
+    -->
+    <div class="bookCoverGrid">
+        <!--Images that will take up the first three spots of the grid-->
+        <img src="Images/hunger-games-cover.jpg" class="bookCovers" />
+        <img src="Images/catching-fire-cover.jpg" class="bookCovers" />
+        <img src="Images/mocking-jay-cover.jpg" class="bookCovers" />
+        <!--
+            The bookCovers div
+            This div is used for the interactable button and paragraph.
+            The div is added to the grid just like a regular element.
+         -->
+        <div class="bookCovers" style="height:10vw; border:none;">
+            <!--
+                This interactable button shows more/less text when it is
+                clicked.
+            -->
+            <button onclick="readMore(1)" id="hungerGamesBtn">Read more</button>
+            <p>
+                <!--
+                    The following span is for the three dots that appear after
+                    the text's title, which disapears/reapears when the button is
+                    clicked
+                -->
+                The Hunger Games<span id="hungerGamesDots">...</span>
+                <!--
+                    This is the extra text that disapears/reapears when the button is
+                    clicked
+                -->
+                <div id="hungerGamesMore" style="display:none; text-align:left; font-size:1.5vw;">
+                    <br />
+                    In a dystopian future, the totalitarian nation of Panem is divided into 12 districts and the Capitol.
+                    Each year two young representatives from each district are selected by lottery to participate in The
+                    Hunger Games. The 24 participants are forced to eliminate their competitors while the citizens of
+                    Panem are required to watch. When 16-year-old Katniss' young sister, Prim, is selected as District
+                    12's female representative, Katniss volunteers to take her place.
+                </div>
+            </p>
+        </div>
+        <!--See previous comments-->
+        <div class="bookCovers" style="height:10vw; border:none;">
+            <button onclick="readMore(2)" id="catchingFireBtn">Read more</button>
+            <p>
+                Catching Fire<span id="catchingFireDots">...</span>
+                <div id="catchingFireMore" style="display:none; text-align:left; font-size:1.5vw;">
+                    <br />
+                    Twelve months after winning the 74th Hunger Games, Katniss Everdeen and her partner Peeta Mellark must go
+                    on the Victor's Tour, but before leaving, Katniss is visited by President Snow who fears
+                    that Katniss defied him a year ago during the games when she chose to die with Peeta. With both Katniss
+                    and Peeta declared the winners, it is fueling a possible uprising. He tells Katniss that she must put out
+                    the flames or else everyone she cares about will be in danger.
+                </div>
+            </p>
+        </div>
+        <!--See previous comments-->
+        <div class="bookCovers" style="height:10vw; border:none;">
+            <button onclick="readMore(3)" id="mockingJayBtn">Read more</button>
+            <p>
+                Mocking Jay<span id="mockingJayDots">...</span>
+                <div id="mockingJayMore" style="display:none; text-align:left; font-size:1.5vw;">
+                    <br />
+                    The Hunger Games saga continues in this sequel that finds Katniss Everdeen faced with a decision that could
+                    sway the fate of a nation. In the wake of the Quarter Quell, the Hunger Games have been changed forever, and
+                    Katniss ends up in District 13. Her courage having inspired a nation, the brave young heroine heeds the advice
+                    of her friends, and sets out to save Peeta. Meanwhile, Katniss' fragile alliance with President Coin could lead to disaster..
+                </div>
+            </p>
+        </div>
+
+    </div>
+
+</body>
+</html>
