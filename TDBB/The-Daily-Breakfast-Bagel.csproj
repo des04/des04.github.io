@@ -73,6 +73,7 @@
     <Content Include="grade12.html" />
     <Content Include="grade9.html" />
     <Content Include="index.html" />
+    <Content Include="js.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

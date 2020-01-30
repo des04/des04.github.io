@@ -16,28 +16,25 @@
     </style>
 </head>
 <body>
-    <!--
-        The navbar
-        It has blue text saying "Suzanne Collins", a menu which when hovers
-        over displays links, and a searchbar which as of writing this does
-        not work.
-    -->
+    
     <div class="navbar">
-        <!--Suzanne Collins text-->
-        <p id="BagelText" style="font-size:5em;">The Daily Breakfast Bagel</p>
-        <!--(dropdown menu and links)-->
-        <div class="dropdown">
-            <button class="dropbtn">
-                <i class="fa fa-caret-down"></i>
-            </button>
-            <div class="dropdown-content">
-                <a href="grade9.html">Grade 9</a>
-                <a href="grade10.html">Grade 10</a>
-                <a href="grade11.html">Grade 11</a>
-                <a href="grade12.html">Grade 12</a>
-            </div>
+        <div>
+            <p id="BagelText" style="font-size:4vw;font-family:serif;">The Daily Breakfast Bagel</p>
+            <!--(dropdown menu and links)-->
+            <div class="dropdown" style="margin-top:1.5vw;">
+                <button class="dropbtn">
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="grade9.html">Grade 9</a>
+                    <a href="grade10.html">Grade 10</a>
+                    <a href="grade11.html">Grade 11</a>
+                    <a href="grade12.html">Grade 12</a>
+                </div>
 
+            </div>
         </div>
+
     </div>
     <!--
         The centered grid
@@ -48,28 +45,74 @@
     <div class="centered-grid-container">
         <div>
             <!--The heading users immediately see-->
-            <h1>Welcome home!</h1>
+            <h1>Welcome</h1>
             <p>
-                (A slideshow showing stuff like caf prices will be here)
-                <br />
-                <br />
-                <br />
                 We're here for you when teachers aren't!
             </p>
         </div>
-        <div style="background-color:white;">
-            <!--
-                Heading for the following grid
-            -->
-            <h1 style="color:black;">News</h1>
-            <p style="color:black; font-weight:bolder;">
-                (News will go here)
-            </p>
-        </div>
+
 
     </div>
+    <div class="slideshow-container">
 
-    
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+            <img src="Images/1.jpg" style="width:100%">
+            <div class="text">Did you know: The average breakfast bagel has 6969 calories</div>
+        </div>
 
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <img src="Images/2.jpg" style="width:100%">
+            <div class="text">Did you know: Holding hands before marriage is a sin</div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <img src="Images/3.jpg" style="width:100%">
+            <div class="text">Who the fuck knows </div>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    </div>
+    <br>
+
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+    </script>
 </body>
 </html>
