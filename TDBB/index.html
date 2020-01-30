@@ -1,0 +1,75 @@
+﻿﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <!--Title of page-->
+    <title>Home</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Links to external sheets/scripts-->
+    <link rel="stylesheet" type="text/css" href="css.css" />
+    <script src="javascript.js"></script>
+    <style>
+        body {
+            background-image: url("Images/home-background.JPG")
+        }
+    </style>
+</head>
+<body>
+    <!--
+        The navbar
+        It has blue text saying "Suzanne Collins", a menu which when hovers
+        over displays links, and a searchbar which as of writing this does
+        not work.
+    -->
+    <div class="navbar">
+        <!--Suzanne Collins text-->
+        <p id="BagelText" style="font-size:5em;">The Daily Breakfast Bagel</p>
+        <!--(dropdown menu and links)-->
+        <div class="dropdown">
+            <button class="dropbtn">
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="grade9.html">Grade 9</a>
+                <a href="grade10.html">Grade 10</a>
+                <a href="grade11.html">Grade 11</a>
+                <a href="grade12.html">Grade 12</a>
+            </div>
+
+        </div>
+    </div>
+    <!--
+        The centered grid
+        This is a div that nicely centers all content whithin it, I use it
+        for anything that I want to be centered, sometimes it is used
+        multiple times on a single page.
+    -->
+    <div class="centered-grid-container">
+        <div>
+            <!--The heading users immediately see-->
+            <h1>Welcome home!</h1>
+            <p>
+                (A slideshow showing stuff like caf prices will be here)
+                <br />
+                <br />
+                <br />
+                We're here for you when teachers aren't!
+            </p>
+        </div>
+        <div style="background-color:white;">
+            <!--
+                Heading for the following grid
+            -->
+            <h1 style="color:black;">News</h1>
+            <p style="color:black; font-weight:bolder;">
+                (News will go here)
+            </p>
+        </div>
+
+    </div>
+
+    
+
+</body>
+</html>

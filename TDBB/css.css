@@ -1,0 +1,339 @@
+﻿/*
+    This sets everything to grow and shrink
+    at the same rate
+*/
+* {
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+body {
+    /*
+        Sets the box-sizing of the page to be 
+        border-box (basically meaning we can 
+        use grids now)
+    */
+    box-sizing: border-box;
+    background-attachment: fixed;
+}
+
+/*
+    This class is positions the navbar, as
+    well as sets it's colour and width. It
+    allows for overflowing elements to be
+    visible, which will be helpful when we
+    get to the drop down menu stuff
+*/
+.navbar {
+    z-index:4;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+    background-color: #ffffff;
+    position: fixed;
+    width: 100%;
+    overflow: visible;
+    height:7vw;
+}
+
+    
+    .navbar a, #BagelText {
+        float: left;
+        font-size: 5em;
+        color: #00FF00;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+/*
+    This block of code makes sure that the drop
+    down floats to the left side of the page,
+    and doesn't automatically show to nav links
+*/
+.dropdown {
+    float: right;
+    overflow: hidden;
+}
+
+/*
+    This block of code acts as a contstructor
+    for the drop down button, getting rid of 
+    any potential border, and setting an image
+    as the background, making it look like a
+    nice icon
+*/
+.dropbtn {
+    margin-right: 7vw;
+    margin-top: 1.5vw;
+    border: none;
+    width: 60px;
+    height: 49px;
+    background: url(../Images/spritesheet.jpg) -80px -230px;
+}
+
+/*
+    This block of code acts as a contstructor
+    for the dropdown as well as for the Suzanne
+    Collins text. It defines the font size, border
+    status, font color, padding, font family, and
+    assures that there is no margin.
+*/
+.dropdown, #BagelText {
+    font-size: 5em;
+    border: none;
+    outline: none;
+    color: #008800;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+
+}
+
+    /*
+    This code makes the cursor a pointer when it hovers
+    over the search container button, the navbar in general,
+    the dropdown button, and the drop down.
+*/
+    .navbar a:hover, .dropdown:hover .dropbtn, .search-container button {
+        cursor: pointer;
+    }
+
+/*
+    This code acts as a constructor for the drop down content,
+    making it invisible at first, assuring its positioning
+    is correct so that it doesn't look funky, defining it's
+    background colour, minimum size, and adding a little
+    box shadow effect to drive home that it is placed above
+    all other content.
+*/
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 160px;
+    box-shadow: 2px 2px 12px 2px #ffffff;
+    z-index: 1;
+}
+
+    /*
+    This code acts as a constructor for the links within the
+    drop down content. It makes them float to the left of the
+    box, gives them a color of black, defines padding, assures
+    there is no text decoration, makes them visible; displaying
+    as block elements, assures the text aligns to the left, 
+    defines the font size, and positions them correctly.
+*/
+    .dropdown-content a {
+        float: none;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+        font-size: .5em;
+        right: 30vw;
+    }
+
+        /*
+    This code makes the background
+    of the dropdown content to be
+    white whenever the user hovers
+    over it.
+*/
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+/*
+    This code displays the dropdown content when the
+    user hovers over the dropdown button.
+*/
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+/*
+    This code styles all main headings accross
+    webpages, giving them an upper margin so they
+    are separated from previous elements on a page,
+    choosing the font family (and providing a
+    list of potential backups), assuring that the
+    font weight is bold, and that the color of
+    the text is white.
+*/
+h1 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    color: white;
+}
+
+/*
+    This code styles the centered grids class.
+    It defines a grid with three collumns, and
+    gives each collumn a padding of ten pixels.
+    Only the center collumn will be used. All
+    divs within it are styled to have a curtain
+    font size (30px) padding (20px 0) alignment
+    of text (center) background colour (black)
+    and take up a curtain amount of space.
+*/
+.centered-grid-container {
+    margin-top:100px;
+    display: grid;
+    -ms-grid-column: auto auto auto;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+}
+
+    .centered-grid-container div {
+        grid-column: 2 / span 1;
+        opacity: 0.6;
+        border-radius:40px;
+        background-color: black;
+        text-align: center;
+        color:white;
+        padding: 40px;
+        font-size: 30px;
+        text-wrap:normal;
+        width:100%;
+        margin-top:2vw;
+    }
+
+.threeByThreeGrid {
+    display: grid;
+    -ms-grid-template-rows: repeat(2, 1fr);
+    -ms-grid-template-columns: repeat(3, 1fr);
+    -moz-grid-template-rows: repeat(2, 1fr);
+    -moz-grid-template-columns: repeat(3, 1fr);
+    -o-grid-template-rows: repeat(2, 1fr);
+    -o-grid-template-columns: repeat(3, 1fr);
+    -webkit-grid-template-rows: repeat(2, 1fr);
+    -webkit-grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    background-color: white;
+    width: 90%;
+    border: 3px black;
+    border-radius: 5px;
+    margin: auto;
+    padding: 2vw;
+    grid-gap: 1vw;
+    text-align: center;
+}
+
+    .bookCoverGrid img {
+        height: 38vw;
+    }
+
+/*
+    This code styles the content that goes inside
+    of the book cover grid.
+*/
+.bookCovers {
+    width: 100%;
+    padding: 0%;
+    font-size: 2vw;
+    font-family: iImpact, 'Trebuchet MS', sans-serif;
+    text-align: center;
+}
+
+    .bookCovers #hungerGamesMore, .bookCovers #catchingFireMore, .bookCovers #mockingJayMore, .bookCovers #underland1More, .bookCovers #underland2More, .bookCovers #underland3More, .bookCovers #underland4More, .bookCovers #underland5More {
+        text-align: left;
+        font-size: 1.5vw;
+    }
+
+/*
+    This code styles the acclaim and reviews
+    class, styling it's headings, paragraphs,
+    and interactive transition
+*/
+.acclaimAndReviews {
+    width: 100%;
+    background-color: #ffffff;
+    border: .2vw solid black;
+    height: 200px;
+    -webkit-transition: background-color .5s ease-in-out, height .5s ease-in-out;
+    transition: background-color .5s ease-in-out, height .5s ease-in-out;
+}
+
+    .acclaimAndReviews h2 {
+        color: #338799;
+    }
+
+    .acclaimAndReviews p {
+        padding: 40px;
+        display: none;
+        text-align: left;
+        color: black;
+    }
+
+    .acclaimAndReviews:hover {
+        background-color: #ffffff;
+        height: 1050px;
+    }
+
+        .acclaimAndReviews:hover p {
+            display: inline;
+        }
+
+/*
+    This code styles the working searchbar that can be found on
+    the browse books page. It styles the background, width (making
+    it take up 100% of it's available space) the fontsize, border,
+    margins, padding, and font color.
+*/
+#searchInput {
+    background: url(../Images/spritesheet.jpg) -230px -440px;
+    background-size: 60px 49px;
+    background-repeat: no-repeat;
+    width: 100%;
+    font-size: 16px;
+    color: white;
+    padding: 12px 20px 12px 40px;
+    border: 1px solid #ddd;
+    margin-bottom: 12px;
+}
+
+/*
+    This styles the UL for the list which filters itself on the
+    browse books page. The code assures that there is no
+    list style (dots, squares, ect) as well as no padding or
+    margin.
+*/
+#booksUL {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+    /*
+    This code adds a border to all of the links within the
+    filtering list, prevents any double borders, sets the
+    background color to be grey, adds some padding, removes
+    the default underline that accompanies links, increases
+    the font size, sets the font color to be black, and
+    makes it into a block element to fill the whole list
+*/
+    #booksUL li a {
+        border: 1px solid #ddd;
+        margin-top: -1px;
+        background-color: #f6f6f6;
+        padding: 12px;
+        text-decoration: none;
+        font-size: 18px;
+        color: black;
+        display: block;
+    }
+
+        /*
+    This code adds a hover effect to all of the links within the
+    list, with the exception of headers
+*/
+        #booksUL li a:hover:not(.header) {
+            background-color: #eee;
+        }
+
+
