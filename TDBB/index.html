@@ -8,7 +8,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!--Links to external sheets/scripts-->
     <link rel="stylesheet" type="text/css" href="css.css" />
-    <script src="javascript.js"></script>
     <style>
         body {
             background-image: url("Images/home-background.JPG")
@@ -17,24 +16,14 @@
 </head>
 <body>
     
-    <div class="navbar">
-        <div>
-            <p id="BagelText" style="font-size:4vw;font-family:serif;">The Daily Breakfast Bagel</p>
-            <!--(dropdown menu and links)-->
-            <div class="dropdown" style="margin-top:1.5vw;">
-                <button class="dropbtn">
-                    <i class="fa fa-caret-down"></i>
-                </button>
-                <div class="dropdown-content">
-                    <a href="grade9.html">Grade 9</a>
-                    <a href="grade10.html">Grade 10</a>
-                    <a href="grade11.html">Grade 11</a>
-                    <a href="grade12.html">Grade 12</a>
-                </div>
-
-            </div>
+    <div class="topnav">
+        <a href="index.html" style="font-family:Georgia, 'Times New Roman', Times, serif" class="active">The Daily Breakfast Bagel</a>
+        <div id="myLinks">
+          <a href="grade9.html">Grade 9</a>
+          <a href="grade10.html">Grade 10</a>
+          <a href="grade11.html">Grade 11</a>
+          <a href="grade12.html">Grade 12</a>
         </div>
-
     </div>
     <!--
         The centered grid
@@ -47,11 +36,11 @@
             <!--The heading users immediately see-->
             <h1>Welcome</h1>
             <p>
-                We're here for you when teachers aren't!
+                Study Kahoots and Quizlets specific to your class, or send ones you made so others can study!
             </p>
         </div>
 
-
+        
     </div>
     <div class="slideshow-container">
 
@@ -70,7 +59,7 @@
         <div class="mySlides fade">
             <div class="numbertext">3 / 3</div>
             <img src="Images/3.jpg" style="width:100%">
-            <div class="text">Who the fuck knows </div>
+            <div class="text">Do you see it?</div>
         </div>
 
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -84,7 +73,6 @@
         <span class="dot" onclick="currentSlide(2)"></span>
         <span class="dot" onclick="currentSlide(3)"></span>
     </div>
-
 
     <script>
         var slideIndex = 1;
@@ -112,7 +100,9 @@
             }
             slides[slideIndex - 1].style.display = "block";
             dots[slideIndex - 1].className += " active";
+
         }
+
     </script>
 </body>
 </html>
