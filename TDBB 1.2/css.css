@@ -1,0 +1,266 @@
+﻿/*
+    This sets everything to grow and shrink
+    at the same rate
+*/
+* {
+    flex-grow: 1;
+    flex-shrink: 1;
+    box-sizing: border-box;
+}
+
+body {
+    /*
+        Sets the box-sizing of the page to be 
+        border-box (basically meaning we can 
+        use grids now)
+    */
+    box-sizing: border-box;
+    background-attachment: fixed;
+    font-family: Verdana, sans-serif;
+    margin: 0;
+    background-size: cover;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+    position: relative;
+}
+  
+.topnav #links {
+    display: none;
+}
+  
+  .topnav a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    display: block;
+  }
+  
+  .topnav a.icon {
+    background: black;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .active {
+    background-color: #4CAF50;
+    color: white;
+  }
+
+/*
+    This code styles all main headings accross
+    webpages, giving them an upper margin so they
+    are separated from previous elements on a page,
+    choosing the font family (and providing a
+    list of potential backups), assuring that the
+    font weight is bold, and that the color of
+    the text is white.
+*/
+h1 {
+    font-family: serif;
+    font-weight: bold;
+    color: white;
+}
+
+/*
+    This code styles the centered grids class.
+    It defines a grid with three collumns, and
+    gives each collumn a padding of ten pixels.
+    Only the center collumn will be used. All
+    divs within it are styled to have a curtain
+    font size (30px) padding (20px 0) alignment
+    of text (center) background colour (black)
+    and take up a curtain amount of space.
+*/
+.centered-grid-container {
+    display: grid;
+    -ms-grid-column: auto auto auto;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+}
+
+    .centered-grid-container div {
+        grid-column: 2 / span 1;
+        border-radius: 40px;
+        background-color: #008800;
+        text-align: center;
+        color: white;
+        padding: 3vw;
+        font-size: 30px;
+        max-width: 100%;
+        margin-top: 2vw;
+    }
+
+.threeByThreeGrid {
+    display: grid;
+    -ms-grid-template-rows: repeat(2, 1fr);
+    -ms-grid-template-columns: repeat(3, 1fr);
+    -moz-grid-template-rows: repeat(2, 1fr);
+    -moz-grid-template-columns: repeat(3, 1fr);
+    -o-grid-template-rows: repeat(2, 1fr);
+    -o-grid-template-columns: repeat(3, 1fr);
+    -webkit-grid-template-rows: repeat(2, 1fr);
+    -webkit-grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    background-color: white;
+    width: 100%;
+    border: 3px black;
+    border-radius: 5px;
+    margin: auto;
+    padding: 2vw;
+    grid-gap: 1vw;
+    text-align: center;
+}
+
+
+
+.mySlides {
+    display: none
+}
+
+.slideshow-container img {
+    width: 100%;
+    vertical-align: middle;
+    border-radius: 40px;
+    max-height: 40vh;
+}
+
+/* Slideshow container */
+.slideshow-container {
+    width:92%;
+    margin: 4%;
+    position: relative;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover, .next:hover {
+        background-color: rgba(0,0,0,0.8);
+    }
+
+/* Caption text */
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    background-color: black;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+    .active, .dot:hover {
+        background-color: #717171;
+    }
+
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+#classContainer {
+    font-size:40px;
+    background-color:black;
+    border-radius: 40px;
+    text-align: center;
+    margin: 5vw;
+    padding-top:6vw;
+}
+.classes {
+    border-radius: 40px;
+    background-color: #008800;
+    text-align: center;
+    color: white;
+    padding: 3vw;
+    font-size: 30px;
+    max-width: 100%;
+    margin: 5vw;
+}
+#english, #math, #science {
+    display:none;
+    word-wrap:break-word;
+}
+.classes:hover {
+    cursor:pointer;
+}
+
+
+
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+
